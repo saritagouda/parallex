@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>parallax website</title>
+</head>
+<body>
+    <header id="header">
+        <a href="#" class="logo">Dandeli</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Resorts & homestays</a></li>
+            <li><a href="#">Activities</a></li>
+            <li><a href="#">Sight Seeing </a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>    
+    </header>
+    <section>
+        <h2 id="text"><span>It's time for a new</span><br>Advanture</h2>
+        <img src="images/sara.png" id="sara">
+        <a href="#" id="btn">Explore</a>
+    </section>
+    <div class="sec">
+        <h2>Trip At Dandeli</h2>
+        <p>Dandeli is a town in the western Indian state of Karnataka.The Dandeli Wildlife sanctuary, with it's tails and dense forests,is home to animals including black panthers,monkey and elephants, as well as many bird spacies.A temple stands at the entrance to the limestone Kavala Convas,Known for their stalagmite formations. West of the coves, Anshi Nationl Park encompasses the Kali Tiger Reserve. </p>
+    </div>
+    <script>
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let saptasagara = document.getElementById('saptasagara');
+
+        window.addEventListener('scroll', function(){
+          let value = window.scrollY; 
+          
+          text.style.top = 50 + value * -0.5 + '%'; 
+          btn.style.marginTop = value * 1.5 + 'px';
+          Header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+    
+</body>
+</html>
